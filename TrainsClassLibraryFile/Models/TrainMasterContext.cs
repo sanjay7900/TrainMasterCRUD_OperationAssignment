@@ -42,7 +42,7 @@ namespace TrainsClassLibraryFile.Models
                     .HasMaxLength(15)
                     .IsUnicode(false);
 
-                entity.HasOne(d => d.TrainNoNavigation)
+                entity.HasOne(d => d.Train)
                     .WithMany(p => p.DaysOnWhichEveryTrainRuns)
                     .HasPrincipalKey(p => p.TrainNo)
                     .HasForeignKey(d => d.TrainNo)
