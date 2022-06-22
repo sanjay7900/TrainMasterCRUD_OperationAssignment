@@ -9,6 +9,6 @@ namespace TrainsClassLibraryFile.Models
         public string? TrainRunDays { get; set; }
         public int? TrainNo { get; set; }
 
-        public virtual Train? Train { get; set; }
+        public virtual Train? TrainNoNavigation { get; set; }
     }
 }

@@ -39,14 +39,14 @@ namespace TrainsClassLibraryFile.Models
                 entity.Property(e => e.TrainNo).HasColumnName("trainNo");
 
                 entity.Property(e => e.TrainRunDays)
-                    .HasMaxLength(30)
+                    .HasMaxLength(15)
                     .IsUnicode(false);
 
-                entity.HasOne(d => d.Train)
+                entity.HasOne(d => d.TrainNoNavigation)
                     .WithMany(p => p.DaysOnWhichEveryTrainRuns)
                     .HasPrincipalKey(p => p.TrainNo)
                     .HasForeignKey(d => d.TrainNo)
-                    .HasConstraintName("FK__days_on_w__train__29572725");
+                    .HasConstraintName("FK__days_on_w__train__2D27B809");
             });
 
             modelBuilder.Entity<Train>(entity =>
